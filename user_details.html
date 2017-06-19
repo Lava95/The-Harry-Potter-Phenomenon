@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>User Details</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+	
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
+    <!-- Theme CSS -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+	<script src="js/addinfo.js"></script>
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body background="img/bg1.png" onload="init()">
+<div class="wrapper">
+    <div class="sidebar" data-color="blue" data-image="img/sidebar-5.jpg">
+
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+    	<div class="sidebar-wrapper">
+		<li>
+            <div class="logo">
+                <a href="" class="simple-text">
+                    The Harry Potter Phenomenon
+                </a>
+            </div>
+
+            <ul class="nav">
+
+                <li class="active">
+                    <a href="user_details.html">
+                        <i class="pe-7s-user"></i>
+                        <p>Introduce Yourself</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="map1.html">
+                        <i class="pe-7s-cloud-upload"></i>
+                        <p>Start Analysis</p>
+                    </a>
+                </li>
+				<li>
+                    <a href="map2.html">
+                        <i class="pe-7s-cloud-upload"></i>
+                        <p>Age Group</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+	<div class="main-panel">
+
+    <header>
+	<div id="main_con1" class="container">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="header-content">
+                            <div class="header-content-inner" >
+
+                                <form>
+
+                                    <div class="form-group">
+
+                                        <label style="font-size: 20px">Name</label>
+                                        <input type="text" class="form-control" id="your_name" name="Name">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label style="font-size: 20px">Age</label>
+                                        <input type="number" class="form-control" id="age" name="Age"/>
+                                    </div>
+                                    </br>
+                                    <nav><h3> <span class="align-left" > <a href="#main_con2" style="font-size: 25px"> Next </a> </span></h3></nav>
+                                    <!--<a href="http://localhost/Final/Final/gatepost.html"></a>-->
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+    </div>
+	<div id="main_con2" class="container" >
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="header-content">
+                            <div class="header-content-inner" >
+                                <form id="history_form2" action="gatepost.html">
+                                    <span id="1" style="font-size: 40px; margin-bottom: 30px; color:white">Tell us a little more..</span></br></br>
+                                    <br><br>
+                                    <div class="form-group">
+                                        <label style="font-size: 20px;">I have read:</label></br>
+
+                                        
+					    <input type="checkbox" name="book" id="b0" value="None" checked> None </br>
+						<input type="checkbox" name="book" id="b1" value="Harry Potter and the Philosopher's Stone">Harry Potter and the Philosopher's Stone </br>
+						<input type="checkbox" name="book" id="b2" value="Harry Potter and the Chamber of Secrets"> Harry Potter and the Chamber of Secrets </br>
+						<input type="checkbox" name="book" id="b3" value="Harry Potter and the Prisoner of Azkaban">Harry Potter and the Prisoner of Azkaban </br>
+						<input type="checkbox" name="book" id="b4" value="Harry Potter and the Goblet of Fire">Harry Potter and the Goblet of Fire </br>
+						<input type="checkbox" name="book" id="b5" value="Harry Potter and the Order of Phoenix">Harry Potter and the Order of Phoenix </br>
+						<input type="checkbox" name="book" id="b6" value="Harry Potter and the Half Blood Prince">Harry Potter and the Half Blood Prince </br>
+						<input type="checkbox" name="book" id="b7" value="Harry Potter and the Deathly Hallows">Harry Potter and the Deathly Hallows </br>
+					   
+                                    </div>
+                                    </br>
+                                    <div class="form-group">
+                                        <label style="font-size: 20px">I have watched:</label></br>
+
+                                        
+					    <input type="checkbox" name="movie" id="m0" value="None" checked> None </br>
+						<input type="checkbox" name="movie" id="m1" value="Harry Potter and the Sorcerer's Stone">Harry Potter and the Sorcerer's Stone </br>
+						<input type="checkbox" name="movie" id="m2" value="Harry Potter and the Chamber of Secrets"> Harry Potter and the Chamber of Secrets </br>
+						<input type="checkbox" name="movie" id="m3" value="Harry Potter and the Prisoner of Azkaban">Harry Potter and the Prisoner of Azkaban </br>
+						<input type="checkbox" name="movie" id="m4" value="Harry Potter and the Goblet of Fire">Harry Potter and the Goblet of Fire </br>
+						<input type="checkbox" name="movie" id="m5" value="Harry Potter and the Order of Phoenix">Harry Potter and the Order of Phoenix </br>
+						<input type="checkbox" name="movie" id="m6" value="Harry Potter and the Half Blood Prince">Harry Potter and the Half Blood Prince </br>
+						<input type="checkbox" name="movie" id="m7" value="Harry Potter and the Deathly Hallows - Part 1">Harry Potter and the Deathly Hallows - Part 1 </br>
+						<input type="checkbox" name="movie" id="m8" value="Harry Potter and the Deathly Hallows - Part 2">Harry Potter and the Deathly Hallows - Part 2 </br>
+					  
+                                    </div>
+                                    </br>
+                        <input type="button" id="submit" style="background:black;" value="Submit" onclick="getlocation()" />
+						<div id="demo">Demography appears here</div>
+						 
+                       
+                    </div>
+					</div>
+	</header>
+	</div>
+	</div>
+	</div>
+
+
+</body>
+<script src="js/addinfo.js"></script>
+</html>
+

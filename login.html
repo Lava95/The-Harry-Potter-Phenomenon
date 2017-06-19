@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+		<meta charset="utf-8">
+		<link href="css/login.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		<!--//webfonts-->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<style>
+			body
+			{
+				background-image: url("img/bg-login.png")
+			}
+			.jumbotron 
+			{
+      			margin-bottom: 0;
+				padding-left: 0px;
+    			padding-top: 3px;
+    			padding-bottom: 20px;
+				background-color:rgba(28,65,213,0.7);
+				background-position: 0% 45%;
+				background-size: cover;
+    			background-repeat: no-repeat;
+    			color: white;
+    			
+    		}
+			span#one
+			{
+				font-size: 50px;
+				color:rgba(255,255,255,1);
+				font-family: BondoluoPeek;
+			}
+			@font-face 
+			{
+				font-family: BondoluoPeek;
+				src: url(css/BondoluoPeek.ttf);
+			}
+
+
+		</style>
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container text-center">
+			<span id="one">THE HARRY POTTER PHENOMENON</span>      
+		</div>
+	</div>
+
+	 <!-----start-main---->
+	 <div class="main">
+		<div class="login-form">
+			<h1 id="one">Member Login</h1>
+					<div class="head">
+						<img src="img/user.png" alt=""/>
+					</div>
+				<form action="some.php">
+						<input type="text" class="text" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
+						<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+						<div class="submit">
+							<input type="button"  value="LOGIN" onclick="location.href='user_details.html';" >
+					</div>	
+					<p><a href="#">Forgot Password ?</a></p>
+				</form>
+			</div>
+			<!--//End-login-form-->
+		</div>
+			 <!-----//end-main---->
+		 		
+</body>
+</html>
